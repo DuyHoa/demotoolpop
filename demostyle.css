@@ -1,10 +1,19 @@
+--color_right: #e08ce4eb
+--color_left: #6bc5f5
+--color_bottom: #e08ce4eb
+--color_top: #6bc5f5
+
+
 *{
     font-family: 'Open Sans';
 }
 
 li{
 	list-style: none;
-	
+}
+
+a{
+	text-decoration: none;
 }
 
 #bt1, #bt2, #bt3{
@@ -13,13 +22,21 @@ li{
 	left: 50%;
 	text-align: center;
 	margin: 0px;
-	float: center;
-	
+	border: 1px solid #fff;
+	border-radius: 30px;
+	color: white;
+	margin: -40px 0px 30px 0px;
+	background : linear-gradient(to right, #e08ce4eb, #6bc5f5);
+    background : -moz-linear-gradient(right, #e08ce4eb, #6bc5f5);
+    background : -webkit-linear-gradient(right, #e08ce4eb, #6bc5f5);
+    background : -o-linear-gradient(right, #e08ce4eb, #6bc5f5);
 }
 
 .close_bt li:hover{
-	color: red;
-	
+	color: #58524deb;
+	transition-duration: 0.1s;
+	-webkit-transition-duration: 0.1s;
+	transform: scale(1.1);
 }
 
 .close_bt{
@@ -27,15 +44,15 @@ li{
 	position: relative;
     display: block;
     float: right;
-    right: 22;
-    font-size: 25;
+    right: 25;
+    font-size: 40;
+	height: 5px;
 }
 
 .bt1, .bt2, .bt3{
 	padding: 10px;
-	margin: 0px;
-	width: auto;
-	border-radius: 50%;
+    margin: 0px;
+    width: 260px;
 }
 
 .button_form{
@@ -46,29 +63,52 @@ li{
 }
 
 .chattag{
+	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 	position: fixed;
 	float: right;
-	bottom: 90px;
-	width: 300px;
+	bottom: 120px;
+	width: 400px;
     height: auto;
-	display: block;
+	display: none;
 	right: 35px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
 }
 
 .chatContainer{
     width: auto;
     height: auto;
     border: 0px solid #ddd;
-
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	background : linear-gradient(to right, #e08ce4eb, #6bc5f5);
+	background : -moz-linear-gradient(right, #e08ce4eb, #6bc5f5);
+    background : -webkit-linear-gradient(right, #e08ce4eb, #6bc5f5);
+    background : -o-linear-gradient(right, #e08ce4eb, #6bc5f5);
 }
 
 .chatContainer > .chatMessages{
-    height: 320px;
+    height: 380px;
     border-bottom: 0px solid #ddd;
-    overflow-y: scroll;
+    overflow-y: hidden;
 	background-color: #F5F5F5;
 	text-align: center;
 	outline: none;
+	width: 400px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+}
+
+.chatMessages p{
+	padding: 30px;
+	font-size: 24px;
+	margin-top: 33px;
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-bottom: 0px;
 }
 
 .chatMessages::-webkit-scrollbar {
@@ -86,27 +126,37 @@ li{
 	background-size: cover;
 }
 
-.mess_button{
-	cursor: pointer;
-	
-}
-
-.mess_button{
-	height: 49.9px;
-	width: 49.9px;
-	cursor: pointer;
-	
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.ske_mess_button{
+	height: 70px;
+	width: 70px;
 	position: fixed;
 	bottom: 30px;
-	right: 20px;
+	right: 50px;
 	border-radius: 50%;
-	border: 0px solid #fff;
+	
 }
 
-.ske_a{
-	display: block;
-	text-decoration: none;
+.mess_button{
+	height: 70px;
+	width: 70px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 30px;
+	right: 50px;
+	border-radius: 50%;
+	background : linear-gradient( #e08ce4eb, #6bc5f5);
+}
+
+.bt_bot{
+	border-radius: 50%;
+	padding: 2.3px;
+}
+
+.mess_button:hover{
+	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.08);
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	transform: scale(1.1);
 }
 
 .ske_img{
@@ -115,30 +165,54 @@ li{
 	height: 100%;
 }
 
-.mess_content{
-	display: none;
-}
-
-.content_wel li{
-	list-style: none;
+.mess_content:before{
+	content: '';
+    box-shadow: none;
+    background: #F5F5F5;
+    transform: none;
+    width: 19px;
+    bottom: 0.1px;
+    height: 16.5px;
+    right: 0.5px;
+    border-color: #F5F5F5;
+    position: absolute;
 }
 
 .mess_content{
 	position: fixed;
-	bottom: 41px;
-	right: 80px;
+	bottom: 57px;
+	right: 135px;
 	width: auto;
 	height: auto;
 	text-align: center;
 	cursor: pointer;
 }
 
+.mess_content:after{
+	content: '';
+    position: absolute;
+    bottom: 2px;
+    right: -7px;
+    width: 13px;
+    height: 13px;
+    background: white;
+    transform: rotate(45deg);
+    z-index: -1;
+    border: 1px solid #ddd;
+    background-color: white;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.08);
+}
+
+
 .mess_content a{
 	text-decoration: none;
 	padding: 20px;
 	text-align: center;
 	border: 1px solid #ddd;
+	background-color: #F5F5F5;
+	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.08);
 }
+
 
 .content_wel{
 	display: block;
@@ -147,11 +221,11 @@ li{
 .notification-num{
 	position: absolute;
     top: -10%;
-    left: 50%;
-    font-size: 1.0rem;
+    left: 70%;
+    font-size: 0.8rem;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10;
     background-color: red;
     border: 4px solid red;
     color: white;
