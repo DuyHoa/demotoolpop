@@ -1,65 +1,56 @@
 <html>
 <head>
     <title>Chatter</title>
+	<meta charset="utf-8">
 	<link rel = 'stylesheet' type='text/css' href="demostyle.css"/>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script language="JavaScript" src="demojs.js"></script>
+    <script language="JavaScript" src="demojs.js" charset="utf-8"></script>
 </head>
 <body onload = "myFuct()">
-<div class="chattag" id="cs">
-    <div class="chatContainer">
-		<div class="close_bt" id="cl">
-			<li>-</li>
+<div class = "bodycontent" id="bd">
+	<div class="chattag" id="cs">
+		<div class="chatContainer">
+			<div class="close_bt" id="cl">
+				<li>-</li>
+			</div>
+			
+			
+			<div class="chatMessages">
+				<p>Bạn đang gặp khó khăn vấn đề gì</p>
+				<form action="#" class="button_form">
+					<center>
+						<div class = "bt1">
+							<a type="button" id = "bt1" name="bt1"></a>
+						</div>
+						<div class = "bt2">
+							<a type="button" id = "bt2" name="bt1"></a>
+						</div>
+						<div class = "bt3">
+							<a type="button" id = "bt3" name="bt1"></a>
+						</div>
+					</center>
+				</form>
+			</div>
 		</div>
-		<script>
-			document.getElementById("cl").onclick = function(){
-				if(document.getElementById("cs").style.display == 'block')
-					turn_off();
-			};
-		</script>
-        <div class="chatMessages">
-			<p>Bạn đang gặp khó khăn vấn đề gì</p>
-			<form action="#" class="button_form">
-				<center>
-					<div class = "bt1">
-						<a type="button" id = "bt1" name="bt1"></a>
-					</div>
-					<div class = "bt2">
-						<a type="button" id = "bt2" name="bt1"></a>
-					</div>
-					<div class = "bt3">
-						<a type="button" id = "bt3" name="bt1"></a>
-					</div>
-				</center>
-		</div>
-    </div>
-</div>
+	</div>
 
 
-<div class="mess" id="mb">
-	<div class = "mess_content" id = "m" style="display: none;">
-		<a id="conten_welcome" class = "mess_wel"></a>
-	</div>
-	<div class= "ske_mess_button">
-		<div class= "mess_button" >
-			<svg viewbox="0 0 100 100"  width="93%" id="svg_tag" class = "bt_bot">
-				
-				<circle class="background" cx="49.9" cy="49.9" r="49.9" fill="none" stroke-width = "1"/>
-				<image id="im" class="ske_img" href = "http://cdn.onlinewebfonts.com/svg/img_311846.png" />
-			</svg>
+	<div class="mess" id="mb">
+		<div class = "mess_content" id = "m" style="display: none;">
+			<li id="conten_welcome1" class = "mess_wel1"></li>
+			<li id="conten_welcome2" class = "mess_wel1"></li>
 		</div>
-		<span class="notification-num" id="news">hi</span>
+		<div class= "ske_mess_button">
+			<div class= "mess_button" >
+				<svg viewbox="0 0 100 100"  width="93%" id="svg_tag" class = "bt_bot">
+					
+					<circle class="background" cx="49.9" cy="49.9" r="49.9" fill="none" stroke-width = "1"/>
+					<image id="im" class="ske_img" />
+				</svg>
+			</div>
+			<span class="notification-num" id="news">hi</span>
+		</div>
 	</div>
-	<script>
-		document.getElementById("mb").onclick = function () {
-			if(document.getElementById("cs").style.display == 'none'){
-				turn_on();
-			}
-			else{
-				turn_off();
-			}	
-		};
-	</script>
 </div>
 </body>
 </html>
