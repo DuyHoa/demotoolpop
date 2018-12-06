@@ -1,7 +1,11 @@
 (function(){
 	
 	window.onload=function(){
-		
+		$.getScript("demojs.js", function(){
+			var p_b = pos_bottom; //khoảng cách bottom
+			var p_r = pos_right; //khoảng cách right
+			var p_f = pos_float;//vị trí bên trái or phải(left\right)
+		});
 		var a = document.getElementsByTagName("head");
 		var b = document.createElement("script");
 		var div = document.createElement('div');
@@ -29,11 +33,16 @@
 		a[0].appendChild(d);
 		
 		div.className = "sketon_div";
+		div.style.display = 'block';
+		div.style.position = 'fixed';
+		div.style.float = p_f;
+		div.style.right = p_r;
+		div.style.bottom = p_b;
 		
 		document.body.appendChild(div);
 
 		
-		$("div").load("demoProject.html");
+		$("div").load("demoProject.txt");
 		
 		c.type = "text/css";
 		c.rel = "stylesheet";
