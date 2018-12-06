@@ -19,6 +19,7 @@ var pos_right = '30'; //khoảng cách right
 var pos_float = 'right';//vị trí bên trái or phải(left\right)
 
 
+
 function myfunt() {
 	time_cal = (time_delay_icon+time_delay)*1000;
 	time_r = time_delay_icon*1000;
